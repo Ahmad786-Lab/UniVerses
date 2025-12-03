@@ -1,0 +1,49 @@
+universe/
+│
+├── .env.local                     # Supabase credentials (never commit)
+├── package.json
+├── tailwind.config.js
+├── tsconfig.json
+├── postcss.config.js
+│
+├── lib/
+│   └── supabaseClient.ts          # Supabase client setup
+│
+├── app/
+│   ├── layout.tsx                 # Global layout (header, metadata, etc.)
+│   ├── globals.css                # Tailwind base styles
+│   ├── page.tsx                   # Landing page (optional)
+│   │
+│   ├── login/
+│   │   └── page.tsx              # Investor Login / Signup page
+│   │
+│   ├── dashboard/
+│   │   └── page.tsx              # Investor Dashboard
+│   │
+│   ├── invite/
+│   │   └── page.tsx              # “Invite Startup” page (coming soon)
+│   │
+│   ├── startup/
+│   │   ├── onboard/
+│   │   │   └── page.tsx          # Startup Onboarding
+│   │   ├── intake/
+│   │   │   └── page.tsx          # Startup Intake Form
+│   │   ├── dashboard/
+│   │   │   └── page.tsx          # Startup Dashboard
+│   │   └── [id]/
+│   │       └── page.tsx          # Startup Profile (Investor View)
+│   │
+│   └── api/                       # Optional server actions or endpoints
+│       └── ...                    # e.g. sendInvite, fetchAIResults
+│
+├── components/
+│   ├── Button.tsx                 # Reusable button component
+│   ├── Card.tsx                   # Reusable card component
+│   ├── InputField.tsx             # Styled text input
+│   ├── Sidebar.tsx                # Dashboard sidebar
+│   └── Layouts/
+│       ├── InvestorLayout.tsx
+│       └── StartupLayout.tsx
+│
+└── public/
+    └── (assets, logos, etc.)
